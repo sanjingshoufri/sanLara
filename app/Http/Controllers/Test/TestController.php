@@ -14,6 +14,8 @@ class TestController extends Controller
         include_once "D:/phpstudy_pro/WWW/xhprof_lib/utils/xhprof_lib.php";
         include_once "D:/phpstudy_pro/WWW/xhprof_lib/utils/xhprof_runs.php";
 
+        echo '111';
+        exit();
 
         $user_id = empty($request->input('user_id'))?100002:$request->input('user_id');
         // 检测一个数据库的操作
