@@ -11,19 +11,18 @@
 |
 */
 
-xhprof_enable();
+// xhprof_enable();
 $app = new Illuminate\Foundation\Application(
     $_ENV['APP_BASE_PATH'] ?? dirname(__DIR__)
 );
-$xhprof_data = xhprof_disable();
+// $xhprof_data = xhprof_disable();
 
-$basePath = base_path();
-include_once $basePath . "/xhprof_lib/utils/xhprof_lib.php";
-include_once $basePath . "/xhprof_lib/utils/xhprof_runs.php";
-$xhprof_runs = new XHProfRuns_Default();
-$run_id = $xhprof_runs->save_run($xhprof_data, "xhprof_foo");
-
-exit();
+// $basePath = base_path();
+// include_once $basePath . "/xhprof_lib/utils/xhprof_lib.php";
+// include_once $basePath . "/xhprof_lib/utils/xhprof_runs.php";
+// $xhprof_runs = new XHProfRuns_Default();
+// $run_id = $xhprof_runs->save_run($xhprof_data, "xhprof_foo");
+// exit();
 
 /*
 |--------------------------------------------------------------------------
