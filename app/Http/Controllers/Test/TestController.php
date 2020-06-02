@@ -11,21 +11,11 @@ class TestController extends Controller
     public function index(Request $request)
     {
         xhprof_enable();
-        include_once "D:/phpstudy_pro/WWW/xhprof_lib/utils/xhprof_lib.php";
-        include_once "D:/phpstudy_pro/WWW/xhprof_lib/utils/xhprof_runs.php";
-
-        echo '111';
-        exit();
 
         $user_id = empty($request->input('user_id'))?100002:$request->input('user_id');
+        
         // 检测一个数据库的操作
-        $users = DB::table('sign')->get();
-
-        // 检测一个数据库的操作       
-        $user = DB::select('select * from es_user where user_id = ?', [$user_id]);
-
-		$info = xhprof_disable();
-        print_r($info);
+        $users = DB::table('sign')->limit(5)->get();
 
         $xhprof_data = xhprof_disable();
         $xhprof_runs = new \XHProfRuns_Default();

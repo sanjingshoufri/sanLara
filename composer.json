@@ -37,6 +37,10 @@
         "classmap": [
             "database/seeds",
             "database/factories"
+        ],
+        "files":[
+            "vendor/xhprof/xhprof_lib/utils/xhprof_lib.php",
+            "vendor/xhprof/xhprof_lib/utils/xhprof_runs.php"
         ]
     },
     "autoload-dev": {
