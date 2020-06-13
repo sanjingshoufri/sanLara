@@ -6,9 +6,6 @@
  * @package  Laravel
  * @author   Taylor Otwell <taylor@laravel.com>
  */
-
-xhprof_enable();
-
 define('LARAVEL_START', microtime(true));
 
 /*
@@ -51,12 +48,13 @@ $app = require_once __DIR__.'/../bootstrap/app.php';
 |
 */
 
+
+xhprof_enable();
+$kernel = $app->make(Illuminate\Contracts\Http\Kernel::class);
+
 $xhprof_data = xhprof_disable();
 $xhprof_runs = new \XHProfRuns_Default();
 $run_id = $xhprof_runs->save_run($xhprof_data, 'xhprof');
-
-
-$kernel = $app->make(Illuminate\Contracts\Http\Kernel::class);
 
 $response = $kernel->handle(
     $request = Illuminate\Http\Request::capture()
