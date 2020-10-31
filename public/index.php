@@ -49,12 +49,12 @@ $app = require_once __DIR__.'/../bootstrap/app.php';
 */
 
 
-xhprof_enable();
+// xhprof_enable();
 $kernel = $app->make(Illuminate\Contracts\Http\Kernel::class);
 
-$xhprof_data = xhprof_disable();
-$xhprof_runs = new \XHProfRuns_Default();
-$run_id = $xhprof_runs->save_run($xhprof_data, 'xhprof');
+// $xhprof_data = xhprof_disable();
+// $xhprof_runs = new \XHProfRuns_Default();
+// $run_id = $xhprof_runs->save_run($xhprof_data, 'xhprof');
 
 $response = $kernel->handle(
     $request = Illuminate\Http\Request::capture()

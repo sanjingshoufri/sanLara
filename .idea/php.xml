@@ -88,6 +88,13 @@
       <path value="$PROJECT_DIR$/vendor/facade/ignition" />
       <path value="$PROJECT_DIR$/vendor/facade/ignition-contracts" />
       <path value="$PROJECT_DIR$/vendor/facade/flare-client-php" />
+      <path value="$PROJECT_DIR$/vendor/xhprof/xhprof_lib" />
+      <path value="$PROJECT_DIR$/vendor/xhprof/xhprof_html" />
+      <path value="$PROJECT_DIR$/vendor/xhprof/support" />
+      <path value="$PROJECT_DIR$/vendor/xhprof/scripts" />
+      <path value="$PROJECT_DIR$/vendor/xhprof/extension" />
+      <path value="$PROJECT_DIR$/vendor/xhprof/examples" />
+      <path value="$PROJECT_DIR$/vendor/xhprof/bin" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.2" />
